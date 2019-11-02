@@ -105,6 +105,7 @@ public class ChannelUpdateHandler extends SocketHandler
                 break;
             }
             case TEXT:
+            case ANNOUNCEMENT:
             {
                 String topic = content.getString("topic", null);
                 TextChannelImpl textChannel = (TextChannelImpl) getJDA().getTextChannelsView().get(channelId);
